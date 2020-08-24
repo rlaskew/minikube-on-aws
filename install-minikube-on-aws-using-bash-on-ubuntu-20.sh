@@ -10,6 +10,23 @@ apt-get update -y
 apt-get upgrade -y
 echo "###############"
 echo "###"
+echo "### Install Docker"
+echo "### https://docs.docker.com/engine/install/ubuntu/"
+echo "###"
+echo "###############"
+apt-get remove docker docker-engine docker.io containerd runc -y
+apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
+apt-get update -y
+apt-get install docker-ce docker-ce-cli containerd.io -y
+usermod -aG docker cloud_user   	
+#usermod -aG docker ubuntu  	
+systemctl stop docker
+systemctl start docker
+apt-get install conntrack 
+echo "###############"
+echo "###"
 echo "### download and mv kubectl"
 echo "### commands direct from https://kubernetes.io/docs/tasks/tools/install-kubectl/"
 echo "###"
@@ -41,3 +58,8 @@ echo "### Check minikube status"
 echo "###"
 echo "###############"
 minikube status
+echo "###############"
+echo "###"
+echo "### Remeber to logout and logback in if you want to use docker command with 'ubuntu' user, without using sudo"
+echo "###"
+echo "###############"
