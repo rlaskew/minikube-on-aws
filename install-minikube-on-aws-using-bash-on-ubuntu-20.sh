@@ -24,7 +24,8 @@ usermod -aG docker cloud_user
 #usermod -aG docker ubuntu  	
 systemctl stop docker
 systemctl start docker
-apt-get install conntrack 
+sysctl fs.protected_regular=0
+#apt-get install conntrack 
 echo "###############"
 echo "###"
 echo "### download and mv kubectl"
