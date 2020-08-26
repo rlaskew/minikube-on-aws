@@ -15,3 +15,10 @@ How to run v1.0 of this repo:
 
 **Where this has been tested:**  
 - August 2020: Right now I've tested this on a linux academy test server using ubuntu 20.04, and which I can tell through AWS meta data uses a T3a.medium 
+
+## Helpful Links
+
+- https://docs.docker.com/engine/install/ubuntu/
+- https://kubernetes.io/docs/tasks/tools/install-kubectl/
+- https://kubernetes.io/docs/tasks/tools/install-minikube/
+
