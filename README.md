@@ -1,6 +1,6 @@
 # minikube-on-aws
 
-**Background:**  If you've having problems running minikube on AWS, this repo provides a sample solution that you can use as is or as a guide for resolving problems you are having running minikube on AWS. 
+**Repo Purpose:**  If you've having problems running minikube on AWS, this repo provides a sample solution that you can use as is or as a guide for resolving problems you are having running minikube on AWS. 
 
 **Background:**  Since I use minikube, microk8s, and kubernetes so much, seemed like a good time to create this repo to document how to run minikube on AWS. Over time i hope to expand this repo to do more than the basics
 
