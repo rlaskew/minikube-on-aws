@@ -20,7 +20,11 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" -y
 apt-get update -y
 apt-get install docker-ce docker-ce-cli containerd.io -y
-usermod -aG docker cloud_user   	
+
+### add user to docker group
+user=$(echo "$USER")
+usermod -aG docker $user 
+#usermod -aG docker cloud_user   	
 #usermod -aG docker ubuntu  	
 systemctl stop docker
 systemctl start docker
