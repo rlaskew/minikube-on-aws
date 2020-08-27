@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/bash -x
 
 echo "###############"
 echo "###"
@@ -8,6 +7,13 @@ echo "###"
 echo "###############"
 apt-get update -y
 apt-get upgrade -y
+echo "###############"
+echo "###"
+echo "### set script to exit if there are errors or unset vars" 
+echo "###"
+echo "###############"
+set -o errexit
+set -o nounset
 echo "###############"
 echo "###"
 echo "### Install Docker"
@@ -23,7 +29,7 @@ apt-get install docker-ce docker-ce-cli containerd.io -y
 
 ### add user to docker group
 user=$(echo "$USER")
-usermod -aG docker $user 
+usermod -aG docker $1
 #usermod -aG docker cloud_user   	
 #usermod -aG docker ubuntu  	
 systemctl stop docker
