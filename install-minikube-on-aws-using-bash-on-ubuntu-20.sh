@@ -65,12 +65,6 @@ install minikube /usr/local/bin/
 rm minikube
 echo "###############"
 echo "###"
-echo "### Check minikube status"
-echo "###"
-echo "###############"
-minikube status
-echo "###############"
-echo "###"
 echo "### Remeber to logout and logback in if you want to use docker command with 'ubuntu' user, without using sudo"
 echo "###"
 echo "###############"

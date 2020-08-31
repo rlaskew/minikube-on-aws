@@ -14,6 +14,7 @@ How to run v1.0 of this repo:
 - step 5. run "minikube start" -- defaults to --vm-driver=docker
 
 **Where this has been tested:**  
+- August 2020: Tested on AWS using ubuntu 20.01, using T3a.medium
 - August 2020: Tested on GCP using ubuntu 20.04, using n1-standard-2 
 - August 2020: Right now I've tested this on a linux academy cloud playground server using ubuntu 20.04, and which I can tell through AWS meta data uses a T3a.medium 
 
@@ -25,6 +26,7 @@ How to run v1.0 of this repo:
 
 ## Changelog
 
+- August: Removed 'minikube status' in install script to solve some file permission issues in AWS ubuntu
 - August: Minor bug fixes
 - August: Tested on GCP
 - August: Initial release
