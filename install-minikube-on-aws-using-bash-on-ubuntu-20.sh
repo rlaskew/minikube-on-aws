@@ -52,6 +52,9 @@ echo "### finally print version of kubectl client"
 echo "###"
 echo "###############"
 kubectl version --client
+
+## install helm
+snap install helm --classic
 echo "###############"
 echo "###"
 echo "### Download and mv/install minikube"

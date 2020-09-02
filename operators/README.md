@@ -3,11 +3,16 @@
 
 ** 9/2/20 Note: This readme is a work in progress **
 
-Step 1: Install Operator Lifecycle Manager
--- https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/install/install.md
+Step 1 (Option A): Install Operator Lifecycle Manager
+-- https://github.com/operator-framework/operator-lifecycle-manager/releases
+-- kubectl apply -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/0.15.1/crds.yaml
+-- kubectl apply -f https://github.com/operator-framework/operator-lifecycle-manager/releases/download/0.15.1/olm.yaml 
 
-Step 2: 
--- 
+Step 2 (Option B): Install Operator Lifecycle Manager
+-- https://github.com/operator-framework/operator-lifecycle-manager/releases
+-- curl -L https://github.com/operator-framework/operator-lifecycle-manager/releases/download/0.15.1/install.sh -o install.sh
+-- chmod +x install.sh
+-- ./install.sh 0.15.1
 
 **Repo Purpose:**  If you've having problems running minikube on AWS, this repo provides a sample solution that you can use as is or as a guide for resolving problems you are having running minikube on AWS. 
 
